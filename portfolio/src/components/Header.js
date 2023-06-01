@@ -1,13 +1,19 @@
 import React from 'react';
+import { useSpring, animated } from 'react-spring';
 
 function Header() {
+  const style = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+  });
+
   return (
-    <header className="bg-light text-dark py-5">
+    <animated.header style={style} className="bg-primary text-white py-5">
       <div className="container text-center">
-        <h1 className="display-4">My Portfolio</h1>
-        <p className="lead">A showcase of my projects and skills</p>
+        <h1 className="display-4">Karim Nasreddine</h1>
+        <p className="lead">Portfolio</p>
       </div>
-    </header>
+    </animated.header>
   );
 }
 

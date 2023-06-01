@@ -2,10 +2,10 @@ import React from 'react';
 
 function Resume() {
   return (
-    <div id="resume" className="container my-5">
-      <h2>Resume</h2>
-      {/* Replace with your own resume details */}
-      <p>My resume will go here.</p>
+    <div id='resume' className="container my-5">
+      <h2 className="mb-5">Resume</h2>
+      <p>Feel free to:</p>
+      <a href="my_resume.pdf" download>Download My Resume</a>
     </div>
   );
 }

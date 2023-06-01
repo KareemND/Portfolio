@@ -1,18 +1,25 @@
-import React from 'react';
+import React from "react";
+import { useSpring, animated } from 'react-spring';
 
-function Project() {
+function Project({ project }) {
+  const props = useSpring({opacity: 1, from: {opacity: 0}})
+
   return (
-    <div className="col-md-4 my-3">
-      <div className="card">
-        {/* Replace with your own image */}
-        <img src="https://via.placeholder.com/150" className="card-img-top" alt="Project"/>
+    <animated.div style={props} className="col-4">
+      <div className="card text-center">  
+        <img 
+          src={project.imageUrl} 
+          className="card-img-top mx-auto d-block" 
+          style={{maxWidth: "150px", maxHeight: "150px", border: "0.5px solid gray"}} 
+          alt={project.title} 
+        />
         <div className="card-body">
-          <h5 className="card-title">Project title</h5>
-          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" className="btn btn-primary">Go to project</a>
+          <h5 className="card-title">{project.title}</h5>
+          <a href={project.demoUrl} className="btn btn-primary">Live Demo</a>
+          <a href={project.codeUrl} className="btn btn-secondary">Code</a>
         </div>
       </div>
-    </div>
+    </animated.div>
   );
 }
 
