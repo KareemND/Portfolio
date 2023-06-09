@@ -15,7 +15,12 @@ function Portfolio() {
       demoUrl: "https://whispering-coast-03143.herokuapp.com/", 
       codeUrl: "https://github.com/Project2Group1/vet-set-go" 
     },
-  
+    { 
+      title: "Blub", 
+      imageUrl: process.env.PUBLIC_URL + "/BLUB.logo.png", 
+      demoUrl: "https://blub.herokuapp.com/", 
+      codeUrl: "https://github.com/UTOR-Group-6/messaging-app" 
+    },
   ];
   return (
     <div id="portfolio" className="container">
